@@ -28,7 +28,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="3"
-            android:text="번호 생성" />
+            android:text="로또 번호 생성" />
 
         <Button
             android:id="@+id/btnQrScan"

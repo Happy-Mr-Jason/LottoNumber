@@ -1,6 +1,7 @@
 package com.example.lottonumber;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -41,6 +42,10 @@ public class MainActivity extends AppCompatActivity {
         btnQrScan = findViewById(R.id.btnQrScan);
         listView = findViewById(R.id.listView);
 
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle("로또번호 생성기");
+        actionBar.setDisplayShowHomeEnabled(true);
+        actionBar.setIcon(R.mipmap.ic_launcher);
         lottoNumbersArrayList = new ArrayList<>();
 
         for (int i = 0; i < 45; i++) {
