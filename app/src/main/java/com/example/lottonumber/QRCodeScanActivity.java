@@ -1,12 +1,15 @@
 package com.example.lottonumber;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
 import com.journeyapps.barcodescanner.CaptureManager;
 import com.journeyapps.barcodescanner.DecoratedBarcodeView;
+
+import java.util.ArrayList;
 
 public class QRCodeScanActivity extends AppCompatActivity {
 
@@ -19,6 +22,11 @@ public class QRCodeScanActivity extends AppCompatActivity {
         setContentView(R.layout.activity_qrcode_scan);
 
         barcodeView = findViewById(R.id.barcodeView);
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle("로또번호 생성기");
+        actionBar.setDisplayShowHomeEnabled(true);
+        actionBar.setIcon(R.mipmap.ic_launcher);
 
         manager = new CaptureManager(this,barcodeView);
         manager.initializeFromIntent(getIntent(),savedInstanceState);
